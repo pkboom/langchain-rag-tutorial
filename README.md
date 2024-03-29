@@ -5,9 +5,11 @@ Create venv
 ```sh
 pip install virtualenv
 python -m venv .venv
+. .venv/bin/activate
 
-# Deactivate venv
+# Deactivate and remvoe .venv
 deactivate
+rm -rf .venv
 ```
 
 Install dependencies.
