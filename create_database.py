@@ -1,10 +1,10 @@
-from langchain.document_loaders import DirectoryLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.document_loaders import DirectoryLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.schema import Document
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores.chroma import Chroma
 import os
 import shutil
+from langchain_openai import OpenAIEmbeddings
+from langchain_community.vectorstores import Chroma
 
 CHROMA_PATH = "chroma"
 DATA_PATH = "data/books"
@@ -30,7 +30,6 @@ def split_text(documents: list[Document]):
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=300,
         chunk_overlap=100,
-        length_function=len,
         add_start_index=True,
     )
     chunks = text_splitter.split_documents(documents)

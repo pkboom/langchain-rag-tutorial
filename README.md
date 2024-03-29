@@ -1,20 +1,26 @@
 # Langchain RAG Tutorial
 
+Deactivate venv
+
+```sh
+deactivate
+```
+
 Install dependencies.
 
-```python
+```sh
 pip install -r requirements.txt
 ```
 
 Create the Chroma DB.
 
-```python
+```sh
 python create_database.py
 ```
 
 Query the Chroma DB.
 
-```python
+```sh
 python query_data.py "How does Alice meet the Mad Hatter?"
 ```
 
