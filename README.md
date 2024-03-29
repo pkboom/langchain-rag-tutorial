@@ -1,8 +1,12 @@
 # Langchain RAG Tutorial
 
-Deactivate venv
+Create venv
 
 ```sh
+pip install virtualenv
+python -m venv .venv
+
+# Deactivate venv
 deactivate
 ```
 
