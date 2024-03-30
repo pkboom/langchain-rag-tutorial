@@ -52,7 +52,7 @@ def save_to_chroma(chunks: list[Document]):
         documents=chunks,
         embedding=OpenAIEmbeddings(),
         persist_directory=CHROMA_PATH,
-        collection_name="alice_in_wonderland",
+        # collection_name="alice_in_wonderland",
     )
     db.persist()
     print(f"Saved {len(chunks)} chunks to {CHROMA_PATH}.")

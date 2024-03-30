@@ -28,7 +28,11 @@ def main():
 
     # Prepare the DB.
     embedding_function = OpenAIEmbeddings()
-    db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
+    db = Chroma(
+        persist_directory=CHROMA_PATH,
+        embedding_function=embedding_function,
+        # collection_name="alice_in_wonderland",
+    )
 
     # Search the DB.
     results = db.similarity_search_with_relevance_scores(query_text, k=3)
